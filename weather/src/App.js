@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 const api = {
   key: "58b783e3a2f433f05eee3b76c028a9bf",
   base: "https://api.openweathermap.org/data/2.5/"
@@ -7,6 +7,11 @@ const api = {
 // import './App.css';
 
 function App() {
+  const [query, setQuery] = useState('');
+  const [weather, setWeather] = useState({});
+
+  
+
 
   const dateBuilder = (d) => {
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
